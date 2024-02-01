@@ -68,19 +68,49 @@ width: 45%;
       </div>
     </div>
 
+    <div class="position-absolute top-50 start-50 translate-middle">
+<form class="row g-3" method="POST">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4" placeholder="Enter a value email" name="Email">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4" placeholder="Enter a Password" name="Password">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Full Name</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Bob the Crafter" name="Name">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Bio</label>
+    <input type="textarea" class="form-control" id="inputAddress2" placeholder="Enter a Bio" name="Bio">
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">Username</label>
+    <input type="text" class="form-control" id="inputCity" placeholder="Enter a Username" name="Username">
+  </div>
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">Pronouns</label>
+    <select id="inputState" class="form-select" name="pronouns">
+      <option selected>Choose...</option>
+      <option>He/Him</option>
+      <option>She/Her</option>
+      <option>Other</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Birthday</label>
+    <input type="date" class="form-control" id="inputZip" name="birthday">
+  </div>
+  <div class="col-12">
+    <div class="form-check">
 
-      <div class="position-absolute top-50 start-50 translate-middle">
-    <h1 class="animate__zoomInDown">WELCOME</h1>
-    <p class="lead center">Welcome to No-Comms, a site which allows everyone who hates no communication to get together and converse with each other whilst fixing a similar issue within the gaming community.
-     With us, your problems of playing with people that dont communicate are solved entirely as now you play with teammates that all share a similar hate. We have features such as:    Feeds,   Profiles,   Liking,   and   Posting.</p>
-   
-   
-    <p class="lead">
-      <a href="/signup" class="btn btn-lg btn-light fw-bold border-white bg-white">Sign Up</a>
-    </p>
-    </div> 
-    <div>
-    <img class="img position-absolute top-100 start-50 translate-middle" src="static/talk.avif" alt="speech bubble">
-    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign up</button>
+  </div>
+  </div>
+</form>
 </body>
 </html>
