@@ -29,7 +29,7 @@ def signup():
         pronoun = request.form["pronouns"]
         birthday = request.form["birthday"]
         cursor = conn.cursor()
-        cursor.execute(f"INSERT INTO `users`(`Email` , `Password`, `Name`, `User_Bio`,`Pronoun`,`Birthday`) VALUES('{email}', '{email}', '{email}')")         
+        cursor.execute(f"INSERT INTO `users`(`Email` , `Password`, `Name`, `User_Bio`, `Username`,`Pronoun`,`Birthday`) VALUES('{email}', '{password}', '{name}', '{bio}', '{username}','{pronoun}', '{birthday}')")         
         cursor.close()
         conn.commit()
     
