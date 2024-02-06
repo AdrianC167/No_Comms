@@ -35,3 +35,19 @@ def signup():
     
 
     return render_template('signup.html.jinja')
+
+
+@app.route('/signin', methods=['GET','POST'])
+def signin():
+    
+    if request.method == 'POST' or 'GET':
+        username = request.form["username"]
+        password = request.form["password"]
+        cursor = conn.cursor()
+        cursor.execute(f"SELECT * FROM `users` WHERE `Username` = '{username}' ")
+        user = cursor.fetchone()  
+        cursor.close()
+    if password == user['Password']:
+        return redirect('/feed')
+
+    return render_template('signin.html.jinja')
