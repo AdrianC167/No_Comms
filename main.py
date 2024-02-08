@@ -43,6 +43,8 @@ conn = pymysql.connect(
 
 @app.route('/')
 def index():
+    if flask_login.current_user.is_authenticated:
+        return redirect('/feed')
     return render_template("index.html.jinja")
 
 @app.route('/signup', methods=['GET','POST'])
@@ -61,7 +63,8 @@ def signup():
         cursor.close()
         conn.commit()
     
-
+    if flask_login.current_user.is_authenticated:
+            return redirect('/feed') 
     return render_template('signup.html.jinja')
 
 
@@ -80,9 +83,14 @@ def signin():
                 if password == result['Password']:
                     user = load_user(result['User_id'])
                     flask_login.login_user(user)
-                    return redirect('/feed')  
+                    return redirect('/feed')          
+            
+        if flask_login.current_user.is_authenticated:
+            return redirect('/feed')  
     except TypeError:
-        return "Wrong Username or Password"    
+        return "Wrong Username or Password"  
+
+
 
     return render_template('signin.html.jinja')
 
@@ -90,5 +98,5 @@ def signin():
 @app.route('/feed', methods=['GET','POST'])
 @flask_login.login_required
 def feed():
-
+    #return flask_login.current_user
     return render_template('feed.html.jinja')
