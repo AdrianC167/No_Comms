@@ -98,5 +98,9 @@ def signin():
 @app.route('/feed', methods=['GET','POST'])
 @flask_login.login_required
 def feed():
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM `post` ORDER BY `timestamp`')
+    results = cursor.fetchall()
+    cursor.close()
     #return flask_login.current_user
-    return render_template('feed.html.jinja')
+    return render_template('feed.html.jinja',post_list = results)
