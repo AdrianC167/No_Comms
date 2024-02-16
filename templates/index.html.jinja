@@ -1,82 +1,94 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="static/styles.css">
     <link rel="icon" href="static/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>jinja</title>
 
 
-<style>
-.white{
-color: white;
+    <style>
+        .white {
+            color: white;
 
-}
+        }
 
-.center{
-text-align: center;
+        .center {
+            text-align: center;
 
-}
+        }
 
-.img{
-height: 42%;
-width: 45%;
+        .img {
+            height: 42%;
+            width: 45%;
 
-}
-
-</style>
+        }
+    </style>
 
 </head>
-<body class=" h-100 text-center text-bg-dark" >
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
- <div class="b-example-divider"></div>
+<body class=" h-100 text-center text-bg-dark">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
-  <header class="p-3 mb-3 border-bottom">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-          <img src="static/logo.png" alt="logo" class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-        </a>
-      
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            
-          <li><a href="/" class="nav-link px-2 fw-bold  white">Home</a></li>
-          <li><a href="/feed" class="nav-link px-2 fw-bold  white">Feed</a></li>
-          
+    <div class="b-example-divider"></div>
 
-        </ul>
+    <header class="p-3 mb-3 border-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                    <img src="static/logo.png" alt="logo" class="bi me-2" width="40" height="32" role="img"
+                        aria-label="Bootstrap">
+                </a>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-        </form>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
-        <div class="dropdown text-end">
-          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="static/default.png" alt="mdo" width="32" height="32" class="rounded-circle">
-          </a>
-          <ul class="dropdown-menu text-small">
-            <li><a class="dropdown-item" href="/signin">Sign in</a></li>
-          </ul>
+                    <li><a href="/" class="nav-link px-2 fw-bold  white">Home</a></li>
+                    <li><a href="/feed" class="nav-link px-2 fw-bold  white">Feed</a></li>
+
+
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                </form>
+
+                <div class="dropdown text-end">
+                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="static/default.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small">
+                        <li><a class="dropdown-item" href="/signin">Sign in</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
 
-      <div class="position-absolute top-50 start-50 translate-middle">
-    <h1 class="animate__zoomInDown">WELCOME</h1>
-    <p class="lead center">Welcome to No-Comms, a site which allows everyone who hates no communication to get together and converse with each other whilst fixing a similar issue within the gaming community.
-     With us, your problems of playing with people that dont communicate are solved entirely as now you play with teammates that all share a similar hate. We have features such as:    Feeds,   Profiles,   Liking,   and   Posting.</p>
-   
-   
-    <p class="lead">
-      <a href="/signup" class="btn btn-lg btn-light fw-bold border-white bg-white">Sign Up</a>
-    </p>
-    </div> 
-    <div>
-    <img class="img position-absolute top-100 start-50 translate-middle" src="static/talk.avif" alt="speech bubble">
-    </div>
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <h1 class="animate__zoomInDown">WELCOME</h1>
+            <p class="lead center">Welcome to No-Comms, a site which allows everyone who hates no communication to get
+                together and converse with each other whilst fixing a similar issue within the gaming community.
+                With us, your problems of playing with people that dont communicate are solved entirely as now you play
+                with teammates that all share a similar hate. We have features such as: Feeds, Profiles, Liking, and
+                Posting.</p>
+
+
+            <p class="lead">
+                <a href="/signup" class="btn btn-lg btn-light fw-bold border-white bg-white">Sign Up</a>
+            </p>
+        </div>
+        <div>
+            <img class="img position-absolute top-100 start-50 translate-middle" src="static/talk.avif"
+                alt="speech bubble">
+        </div>
 </body>
+
 </html>
