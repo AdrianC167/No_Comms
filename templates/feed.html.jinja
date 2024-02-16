@@ -10,9 +10,31 @@
     <link rel="icon" href="static/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>jinja</title>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+        var wow = new WOW({
+            boxClass:     'wow',
+            animateClass: 'animate__animated'
+        })
+        wow.init();
+</script>
 
     <style>
+        .padding-left {
+            padding-left: 385px;
+
+
+
+        }
+
+
+        .width {
+            max-width: 850px;
+
+        }
+
+
+
         .padding-top {
             padding-top: 20px;
 
@@ -146,7 +168,7 @@
 
                     <li><a href="/" class="nav-link px-2 fw-bold  white">Home</a></li>
                     <li><a href="/feed" class="nav-link px-2 fw-bold  white">Feed</a></li>
-                    <li><a href="#" class="nav-link px-2 fw-bold  white">Profile</a></li>
+
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
@@ -169,32 +191,36 @@
 
 
 
-            <form method="POST" action="/post" class="row padding-bottom padding-top container ">
-                <div class="row">
-                    <div class="col">
+
+            <div class="row text-center padding-bottom padding-top container-sm ">
+                <form method="POST" action="/post" class="row ">
+                    <div class="col width padding-left">
                         <input type="text" class="form-control" placeholder="Enter your description"
                             aria-label="First name" name="description">
                     </div>
-                    <div class="col ">
+                    <div class="col">
                         <button class="btn btn-primary " type="submit">Create Post</button>
 
                     </div>
+                </form>
+            </div>
 
-                </div>
 
-            </form>
 
             {% for post in post_list %}
-            <div class="col-6 container text-center padding-bottom">
+            <div class="col-6 container text-center padding-bottom wow animate__animated  animate__backInRight">
                 <div class="card shadow-sm">
                     <div class="card-body">
                         <p class="card-text"> {{post['description']}} </p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
-
+                                <form action="/likes/{{post['id']}}" method="POST">
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Like</button>
+                                </form>
+                                <button type="button"
+                                    class="btn btn-sm btn-outline-secondary disabled">{{post['likes']}}</button>
                             </div>
-                            <small class="text-body-secondary">{{post['likes']}}</small>
+                            <small class="text-body-secondary">{{post['timestamp']}}</small>
                         </div>
                     </div>
                 </div>

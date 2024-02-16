@@ -130,3 +130,12 @@ def create_post():
     cursor.execute(f"INSERT INTO `post`(`description`, `User_id`) VALUES ('{description}','{user_id}')")
     get_db().commit()
     return redirect("/feed")
+
+
+@app.route('/likes/<int:post_index>', methods = ['POST'])
+def likes(post_index):
+    cursor = get_db().cursor()
+    cursor.execute(f"UPDATE `post` SET `likes` = `likes` + 1  WHERE `id` = {post_index} ")
+    cursor.close()
+    get_db().commit()
+    return redirect('/feed')
